@@ -1,0 +1,10 @@
+.local/
+backups/
+legacy/
+tests/fixtures/
+tests/screenshots/
+node_modules/
+*.tar.gz
+dist/
+.pages/
+github-upload/
