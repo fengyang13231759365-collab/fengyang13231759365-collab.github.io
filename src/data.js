@@ -1,5 +1,5 @@
 /* 统一作品配置；本地后台保存内容优先。 */
-window.PORTFOLIO_DATA={
+window.PORTFOLIO_DATA = {
   "profile": {
     "name": "冯杨",
     "nameEn": "FENG YANG",
@@ -1406,7 +1406,7 @@ window.PORTFOLIO_DATA={
       "tags": [
         "个人概念设计"
       ],
-      "cover": "assets/works/poster-characters/image-01.webp",
+      "cover": "assets/works/poster-characters/summer-splash-refined-a36212731c83.webp",
       "year": "",
       "featured": false,
       "description": "以角色为中心的两张主题海报，分别呈现夏日活力与冰蓝幻想氛围。",
@@ -1414,14 +1414,14 @@ window.PORTFOLIO_DATA={
       "tools": [],
       "images": [
         {
-          "src": "assets/works/poster-characters/image-01.webp",
-          "alt": "夏日角色海报",
-          "caption": "夏日角色海报"
+          "src": "assets/works/poster-characters/summer-splash-refined-a36212731c83.webp",
+          "alt": "夏日水花少女海报",
+          "caption": "夏日水花少女海报"
         },
         {
-          "src": "assets/works/poster-characters/image-02.webp",
-          "alt": "冰蓝角色海报",
-          "caption": "冰蓝角色海报"
+          "src": "assets/works/poster-characters/sofia-idol-refined-57ca2e58910d.webp",
+          "alt": "星野索菲亚：星际偶像海报",
+          "caption": "星野索菲亚：星际偶像海报"
         }
       ],
       "videoSrc": "",
