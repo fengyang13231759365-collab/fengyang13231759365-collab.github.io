@@ -65,3 +65,25 @@ dialog{width:min(1200px,calc(100vw - 32px));max-height:94svh;background:#090D14;
 .short-film-cover{aspect-ratio:16/9}.short-film-cover img{object-fit:contain}.short-film .player-frame{width:100%;aspect-ratio:16/9}
 .app-download{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-block:30px;padding:26px;border:1px solid var(--line);background:var(--panel)}.app-download h4{font-size:24px;margin:8px 0}.app-download p{font-size:12px;max-width:620px}.app-download .button{flex:none}
 @media(max-width:680px){.app-download{align-items:flex-start;flex-direction:column;padding:20px;gap:20px}}
+
+/* 两张角色海报使用相同展示画幅；灯箱仍显示完整原图。 */
+.inline-image-grid .image-zoom[data-homework="poster-characters"],
+.carousel[data-gallery-work="poster-characters"] .image-zoom {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+.carousel[data-gallery-work="poster-characters"] .image-zoom {
+  width: min(100%, 52vh);
+  width: min(100%, 52svh);
+  margin-inline: auto;
+}
+.inline-image-grid .image-zoom[data-homework="poster-characters"] > img,
+.carousel[data-gallery-work="poster-characters"] .image-zoom > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+}

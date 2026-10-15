@@ -74,7 +74,7 @@
   function galleryMarkup(w) {
     const images = (w.images || []).map(normalizeImage).filter(i => U(i.src));
     gallery = images; galleryTitle = w.title;
-    return images.length ? `<div class="project-gallery carousel" tabindex="0" aria-label="作品图片轮播"><figure><button type="button" class="image-zoom" data-image="0" aria-label="查看当前图片大图">${image(images[0].src,images[0].alt || w.title)}<span>查看大图 ＋</span></button><figcaption aria-live="polite">${E(images[0].caption || images[0].alt || '')}</figcaption></figure><div class="carousel-controls"><button data-slide="-1" ${images.length<2?'disabled':''} aria-label="上一张图片">← 上一张</button><span class="carousel-count" aria-live="polite">1 / ${images.length}</span><button data-slide="1" ${images.length<2?'disabled':''} aria-label="下一张图片">下一张 →</button></div></div>` : `<div class="detail-placeholder">${placeholder(w,0)}<p>项目图片待添加。</p></div>`;
+    return images.length ? `<div class="project-gallery carousel" data-gallery-work="${E(w.id)}" tabindex="0" aria-label="作品图片轮播"><figure><button type="button" class="image-zoom" data-image="0" aria-label="查看当前图片大图">${image(images[0].src,images[0].alt || w.title)}<span>查看大图 ＋</span></button><figcaption aria-live="polite">${E(images[0].caption || images[0].alt || '')}</figcaption></figure><div class="carousel-controls"><button data-slide="-1" ${images.length<2?'disabled':''} aria-label="上一张图片">← 上一张</button><span class="carousel-count" aria-live="polite">1 / ${images.length}</span><button data-slide="1" ${images.length<2?'disabled':''} aria-label="下一张图片">下一张 →</button></div></div>` : `<div class="detail-placeholder">${placeholder(w,0)}<p>项目图片待添加。</p></div>`;
   }
   function detail(slug, category) {
     const w = data.works.find(w => w.slug === slug);
