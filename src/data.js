@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     "introduction": "具备品牌视觉、动态设计及AIGC内容制作经验，能够完成从需求拆解、视觉风格设定、角色/场景资产、分镜与提示词，到AI图像/视频生成及后期交付的完整流程。擅长将传统设计工具与AI工作流结合，重点关注角色一致性、场景连续性、镜头节奏与商业视觉完成度。",
     "careerGoal": "AIGC视觉设计师 / AI视频设计师\n品牌视觉 × 动态设计 × AIGC图像/视频",
     "location": "北京",
-    "email": "fengyang13231759365@gmail.com",
+    "email": "13231759365@163.com",
     "wechatQr": "",
     "resumePdf": "assets/profile/resume-feng-yang.pdf",
     "externalLinks": [
