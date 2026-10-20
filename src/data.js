@@ -1535,7 +1535,7 @@ window.PORTFOLIO_DATA = {
           "caption": "青春奔跑"
         },
         {
-          "src": "assets/works/banner-youth/image-02.webp",
+          "src": "assets/works/banner-youth/youth-jump-refined-743315ca7fae.webp",
           "alt": "青春跳跃",
           "caption": "青春跳跃"
         }
