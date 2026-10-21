@@ -13,7 +13,7 @@
     try { const u=new URL(value); if(u.protocol!=='https:' || !['www.bilibili.com','bilibili.com','m.bilibili.com'].includes(u.hostname))return null;
       const m=u.pathname.match(/^\/video\/(BV[a-zA-Z0-9]{10})\/?$/); if(!m)return null;
       const page=Math.max(1,Math.min(1000,Number(u.searchParams.get('p'))||1));
-      return {bvid:m[1],page,url:'https://www.bilibili.com/video/'+m[1]+'/?p='+page,embed:'https://player.bilibili.com/player.html?bvid='+m[1]+'&page='+page+'&autoplay=0&danmaku=0'};
+      return {bvid:m[1],page,url:'https://www.bilibili.com/video/'+m[1]+'/?p='+page,embed:'https://player.bilibili.com/player.html?bvid='+m[1]+'&p='+page+'&autoplay=0&danmaku=0'};
     }catch{return null;}
   }
   function douyin(value) {

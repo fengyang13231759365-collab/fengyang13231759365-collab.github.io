@@ -87,3 +87,7 @@ dialog{width:min(1200px,calc(100vw - 32px));max-height:94svh;background:#090D14;
   object-fit: cover;
   object-position: center;
 }
+
+/* 播放入口始终保留，外链播放器报错时仍可打开原视频。 */
+.bili-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}.bili-status:empty{display:none}
+@media(max-width:680px){.bili-actions .button{width:100%;text-align:center}}
