@@ -56,6 +56,7 @@
       if (!['design','video','app'].includes(w.type)) errors.push('作品类型无效：' + w.id);
       if (!data.categories[w.type]?.some(c => c.id === w.category)) errors.push('作品分类不存在：' + w.id);
       if(w.bilibiliUrl && !bilibili(w.bilibiliUrl)) errors.push('请填写B站单个视频的完整 BV 链接：'+w.title);
+      for(const episode of Array.isArray(w.bilibiliPages)?w.bilibiliPages:[]) if(episode.bilibiliUrl && !bilibili(episode.bilibiliUrl)) errors.push('B站分集链接无效：'+w.title);
       if(w.douyinUrl && !douyin(w.douyinUrl)) errors.push('请填写抖音单个视频链接：'+w.title);
       for (const field of ['cover','poster','videoSrc','downloadSrc']) if (w[field] && !safeUrl(w[field])) errors.push('资源路径无效：' + w.id + '.' + field);
       if (!Array.isArray(w.images) || !Array.isArray(w.tags) || !Array.isArray(w.tools)) errors.push('images/tags/tools 必须为数组：' + w.id);

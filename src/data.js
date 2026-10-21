@@ -998,6 +998,117 @@ window.PORTFOLIO_DATA = {
       "douyinUrl": "https://www.douyin.com/video/7695976186308037897"
     },
     {
+      "id": "drama-eighteen",
+      "slug": "drama-eighteen",
+      "title": "冷漠老公撞大运重回十八",
+      "titleEn": "",
+      "type": "video",
+      "category": "ai-live-action",
+      "tags": [
+        "都市情感",
+        "记忆重返十八岁",
+        "真人风格"
+      ],
+      "cover": "assets/works/drama-eighteen/cover-cc7486124c.webp",
+      "poster": "assets/works/drama-eighteen/cover-cc7486124c.webp",
+      "year": "",
+      "featured": false,
+      "description": "丈夫在意外后记忆回到十八岁，成年人的外表与少年心态形成反差。两段短剧围绕夫妻重新相处、家庭生活与女主的职场日常展开，以人物对白和女主心声串联情绪变化。",
+      "role": "",
+      "tools": [],
+      "images": [
+        {
+          "src": "assets/works/drama-eighteen/c01-a7d7963840.webp",
+          "alt": "女主｜人物与服装设定",
+          "caption": "女主｜人物与服装设定"
+        },
+        {
+          "src": "assets/works/drama-eighteen/c02-8a508aa00c.webp",
+          "alt": "丈夫｜人物与服装设定",
+          "caption": "丈夫｜人物与服装设定"
+        },
+        {
+          "src": "assets/works/drama-eighteen/c03-b1bc75ae58.webp",
+          "alt": "田小雨｜人物与服装设定",
+          "caption": "田小雨｜人物与服装设定"
+        },
+        {
+          "src": "assets/works/drama-eighteen/e01-22a4abe883.webp",
+          "alt": "都市公寓｜夜景空间",
+          "caption": "都市公寓｜夜景空间"
+        },
+        {
+          "src": "assets/works/drama-eighteen/e02-89a174a526.webp",
+          "alt": "公寓卫生间｜夜景空间",
+          "caption": "公寓卫生间｜夜景空间"
+        },
+        {
+          "src": "assets/works/drama-eighteen/e03-be273a1080.webp",
+          "alt": "新媒体公司｜工位与走廊",
+          "caption": "新媒体公司｜工位与走廊"
+        },
+        {
+          "src": "assets/works/drama-eighteen/e04-5edf88a686.webp",
+          "alt": "员工餐厅｜日景空间",
+          "caption": "员工餐厅｜日景空间"
+        },
+        {
+          "src": "assets/works/drama-eighteen/p01-9eb6c0f38c.webp",
+          "alt": "碎花手机壳｜道具多角度",
+          "caption": "碎花手机壳｜道具多角度"
+        },
+        {
+          "src": "assets/works/drama-eighteen/p02-a3dbce4f37.webp",
+          "alt": "粉色眼罩与耳机｜道具细节",
+          "caption": "粉色眼罩与耳机｜道具细节"
+        },
+        {
+          "src": "assets/works/drama-eighteen/p03-45fe0e9413.webp",
+          "alt": "百元咖啡卡｜道具多角度",
+          "caption": "百元咖啡卡｜道具多角度"
+        },
+        {
+          "src": "assets/works/drama-eighteen/u01-3902361f45.webp",
+          "alt": "事故资讯｜手机屏幕参考",
+          "caption": "事故资讯｜手机屏幕参考"
+        }
+      ],
+      "videoSrc": "",
+      "bilibiliUrl": "https://www.bilibili.com/video/BV1KLnB6uE4y/",
+      "bilibiliPages": [
+        {
+          "title": "第3集 · 01:58",
+          "bilibiliUrl": "https://www.bilibili.com/video/BV1KLnB6uE4y/"
+        },
+        {
+          "title": "第4集 · 02:06",
+          "bilibiliUrl": "https://www.bilibili.com/video/BV1KLnB6uEHc/"
+        }
+      ],
+      "aspectRatio": "720:1254",
+      "duration": "两集 · 04:04",
+      "credits": [
+        "3组人物设定 / 4个场景 / 3组道具 / 1张屏幕素材"
+      ],
+      "processNote": "以下为根据两段成片逆推整理的制作参考，两集共用同一套人物、场景与道具设定。",
+      "process": [
+        {
+          "title": "统一角色与空间设定",
+          "description": "以女主、丈夫与田小雨的四宫格设定统一面貌、发型和服装；公寓夜景与清晨复用相同家具布局，公司与餐厅保持空间关系。"
+        },
+        {
+          "title": "拆解对白与镜头节奏",
+          "description": "制作参考将两段内容分别整理为16个镜头，单镜约6—9秒。人物对白与女主心声分开处理，复杂互动拆为中近景与正反打，减少同镜多人同时开口。"
+        },
+        {
+          "title": "道具连续性与声音设计",
+          "description": "固定碎花手机壳、浅粉眼罩与耳机及百元咖啡卡的外观；手机资讯采用屏幕贴合与跟踪思路，字幕后期叠加。以低音量环境声和跨镜延续的音乐衔接家庭、通勤与职场场景。"
+        }
+      ],
+      "outcome": "上方可切换观看B站第3集与第4集；下方展示11张共用制作参考图，支持轮播与大图浏览。",
+      "placeholder": false
+    },
+    {
       "id": "bili-bv1xkpv6ve7w",
       "slug": "bili-bv1xkpv6ve7w",
       "title": "澄澈饮水机 TVC",

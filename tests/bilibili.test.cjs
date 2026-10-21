@@ -17,7 +17,7 @@ test('外链播放器使用官方p参数，原视频与播放器指向相同分�
 
 test('访客无需加载第三方播放器即可使用原视频入口',()=>{
   const start=source.indexOf('  function biliMarkup('),end=source.indexOf('  function galleryMarkup(',start);
-  const context={E:C.esc,image:()=>'<img>',placeholder:()=>''};
+  const context={C,E:C.esc,image:()=>'<img>',placeholder:()=>''};
   vm.runInNewContext(source.slice(start,end)+'\nthis.render=biliMarkup;',context);
   const html=context.render({title:'视频',bilibiliPages:[{title:'第一集'},{title:'第二集'}]},C.bilibili('https://www.bilibili.com/video/BV1PDpv6vEDd/'),'cover.webp',16/9);
   assert.doesNotMatch(html,/<iframe/);
@@ -53,4 +53,31 @@ test('分集切换同步所有观看入口，站内失败后原视频链接仍�
   episodes[0].onclick();
   assert.match(frame.html,/&amp;p=1&amp;/);
   assert.ok(links.every(link=>link.href.endsWith('?p=1')));
+  episodes[1].dataset.episodeUrl='https://www.bilibili.com/video/BV1KLnB6uEHc/';
+  episodes[1].onclick();
+  assert.match(frame.html,/bvid=BV1KLnB6uEHc&amp;p=1&amp;/);
+  assert.ok(links.every(link=>link.href==='https://www.bilibili.com/video/BV1KLnB6uEHc/?p=1'));
+  episodes[0].dataset.episodeUrl='https://www.bilibili.com/video/BV1KLnB6uE4y/';
+  episodes[0].onclick();
+  assert.match(frame.html,/bvid=BV1KLnB6uE4y&amp;p=1&amp;/);
+  assert.ok(links.every(link=>link.href==='https://www.bilibili.com/video/BV1KLnB6uE4y/?p=1'));
+
+});
+
+test('独立BV分集的渲染链接正确，非法分集链接不能保存',()=>{
+  const context={C,E:C.esc,image:()=>'<img>',placeholder:()=>''};
+  const start=source.indexOf('  function biliMarkup('),end=source.indexOf('  function galleryMarkup(',start);
+  vm.runInNewContext(source.slice(start,end)+'\nthis.render=biliMarkup;',context);
+  const dataContext={window:{}};
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../src/data.js'),'utf8'),dataContext);
+  const data=JSON.parse(JSON.stringify(dataContext.window.PORTFOLIO_DATA));
+  const work=data.works.find(w=>w.id==='drama-eighteen');
+  assert.equal(work.category,'ai-live-action');
+  const html=context.render(work,C.bilibili(work.bilibiliUrl),work.poster,C.ratio(work.aspectRatio));
+  assert.match(html,/data-episode-url="https:\/\/www\.bilibili\.com\/video\/BV1KLnB6uEHc\/\?p=1"/);
+  assert.match(html,/第3集/);assert.match(html,/第4集/);
+  assert.equal(work.images.length,11);
+  for(const im of work.images)assert.ok(fs.existsSync(path.join(__dirname,'../public',im.src)));
+  work.bilibiliPages[1].bilibiliUrl='https://example.com/video/BV1KLnB6uEHc/';
+  assert.ok(C.validate(data).some(e=>e.includes('分集链接无效')));
 });

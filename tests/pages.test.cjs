@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),http=require('node:http');
 const {buildPages}=require('../scripts/build-pages.cjs'),{handler}=require('../scripts/serve.cjs');
 test('GitHub Pages只发布当前引用素材，保留深层地址、视频入口和APK，不带后台与数据库',async()=>{
- const {out,data,resources}=buildPages();assert.equal(data.publicSite,true);assert.equal(data.works.filter(w=>w.type==='video').length,12);
+ const {out,data,resources}=buildPages();assert.equal(data.publicSite,true);assert.equal(data.works.filter(w=>w.type==='video').length,13);
  assert.ok(!fs.existsSync(path.join(out,'admin.html')));assert.ok(!fs.existsSync(path.join(out,'server')));assert.ok(!fs.existsSync(path.join(out,'.local')));
  for(const file of resources)assert.ok(fs.statSync(path.join(out,file)).size>0,file);
  const ctx={window:{}};vm.runInNewContext(fs.readFileSync(path.join(out,'data.js'),'utf8'),ctx);assert.equal(ctx.window.PORTFOLIO_DATA.publicSite,true);
