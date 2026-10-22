@@ -968,16 +968,16 @@ window.PORTFOLIO_DATA = {
           "caption": "公寓客厅 · 场景参考"
         }
       ],
-      "videoSrc": "",
+      "videoSrc": "assets/works/bili-bv1tgww6jesv/middleage-complete-9d1ff2d44923.mp4",
       "bilibiliUrl": "",
       "bilibiliPages": [],
       "aspectRatio": "9:16",
-      "duration": "",
+      "duration": "04:14",
       "credits": [
         "9:16竖屏",
         "本地参考片段：两段，约4分14秒"
       ],
-      "playbackNote": "",
+      "playbackNote": "站内版为两段成片合辑，可直接播放，也可通过下方入口在抖音观看。",
       "processNote": "提供的素材包为逆推整理的参考资产与分镜，以下资料展示角色、道具、场景与镜头拆解。",
       "process": [
         {
@@ -993,7 +993,7 @@ window.PORTFOLIO_DATA = {
           "description": "素材说明建议分别处理人物、车辆和场景的连续性；字幕、手机文字、系统HUD与扫描效果由后期叠加。具体使用工具与个人负责环节待补充。"
         }
       ],
-      "outcome": "本项目成片已发布于抖音，可通过上方入口打开原视频。另附10张角色、道具及场景参考图，支持轮播与大图浏览。",
+      "outcome": "上方提供两段成片合辑的站内播放器，并保留抖音原视频入口。另附10张角色、道具及场景参考图，支持轮播与大图浏览。",
       "placeholder": false,
       "douyinUrl": "https://www.douyin.com/video/7695976186308037897"
     },
